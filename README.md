@@ -33,6 +33,7 @@ pip install binanceAPI-abr-ver
 **to import the package:**
 
 ```
+#make sure you have binance.py, interval.py, and order_num.py in the same current directory as your main file
 from binance.binance import BinanceClient
 from binance.interval_num import Interval
 from binance.order_num import Order
