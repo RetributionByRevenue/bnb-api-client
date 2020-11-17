@@ -43,7 +43,11 @@ from binance.order_num import Order
 ```
 client = BinanceClient('your-api-key', 'your-api-secret')
 ```
-
+## Open an Order
+```
+print(client.buy('LINKUSDT', orderType=Order.MARKET ,test=False , quantity=10)) #buys $10 worth of link
+print(client.sell('LINKUSDT', orderType=Order.MARKET ,test=False , quantity=10)) #sells 10 link to USD
+```
 For example use cases, please look into [test.py](https://github.com/mrhuytran/bnb-api-wrapper/blob/master/test.py). 
 
 *Note that the import statements are different in test.py.*
