@@ -111,10 +111,11 @@ class BinanceClient:
         data = json.loads(response.text)
 
         # convert dict to dataframe
+        # return a dataframe for multiple pairs, or float for a specific pair's current price
         if isinstance(data, list):
             price_df = df(data)
         else:
-            price_df = df([data])
+            price_df = df([data])["price"][-1:].item()
 
         return price_df
 
